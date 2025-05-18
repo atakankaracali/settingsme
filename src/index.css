@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🎨 Global Variables */
+:root {
+  --bg-dark: #000;
+  --text-muted: #9ca3af;
+  --terminal-green: #33ff88;
+
+  /* Glow Colors */
+  --glow-cyan: #00ffff;
+  --glow-pink: #ff2da0;
+  --glow-green: #00ff88;
+  --glow-indigo: #6366f1;
+}
+
+/* 🔤 Fonts */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: var(--bg-dark);
+  background-image:
+    url('/galaxy.gif'),
+    url('/stars.png'),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.02), transparent 70%),
+    url('/noise.png');
+  background-size: cover;
+  background-repeat: repeat;
+  background-blend-mode: lighten, overlay;
+  color: white;
+  overflow-x: hidden;
+  padding: 1rem;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222;
+}
+
+/* ⚡ Glitch Text */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+  animation: glitch 2s infinite;
+  text-shadow: 0 0 6px var(--glow-cyan);
+}
+
+@keyframes glitch {
+
+  0%,
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+
+  20% {
+    transform: translate(-1px, 1px);
+    opacity: 0.9;
+  }
+
+  40% {
+    transform: translate(1px, -2px);
+    opacity: 0.8;
+  }
+
+  60% {
+    transform: translate(-2px, 2px);
+    opacity: 0.9;
+  }
+
+  80% {
+    transform: translate(1px, 1px);
+    opacity: 1;
+  }
+}
+
+/* 🪐 Container Card */
+.sim-container {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: rgba(17, 24, 39, 0.85);
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.05);
+}
+
+/* 🔲 Form Elements */
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  background-color: #111827;
+  color: white;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #334155;
+  transition: border-color 0.2s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--glow-cyan);
+  box-shadow: 0 0 6px var(--glow-cyan);
+  outline: none;
+}
+
+/* ✨ Glow Button */
+.glow-button {
+  background: linear-gradient(90deg, var(--glow-indigo), var(--glow-pink));
+  color: white;
+  padding: 0.8rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  width: 100%;
+}
+
+.glow-button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 16px var(--glow-pink);
+}
+
+@media (min-width: 640px) {
+  .glow-button {
+    width: auto;
+  }
+
+  .button-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* 🎯 Button Group */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}

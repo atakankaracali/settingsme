@@ -1,0 +1,163 @@
+.patchcard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    color: white;
+    animation: fadeIn 1s ease;
+}
+
+.patchcard-box {
+    width: 100%;
+    max-width: 640px;
+    background: linear-gradient(to bottom right, rgba(20, 20, 30, 0.8), rgba(10, 10, 20, 0.7));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.07);
+    backdrop-filter: blur(14px);
+    font-family: 'JetBrains Mono', monospace;
+    position: relative;
+}
+
+.patchcard-box::before {
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.05), transparent 60%);
+    z-index: -1;
+    animation: slowPulse 6s infinite ease-in-out;
+}
+
+@keyframes slowPulse {
+
+    0%,
+    100% {
+        opacity: 0.15;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.25;
+        transform: scale(1.02);
+    }
+}
+
+.patchcard-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00ffe1;
+    text-align: center;
+    text-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.patchcard-subtext,
+.patchcard-reason {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+}
+
+.patchcard-reason {
+    font-style: italic;
+    color: #7dd3fc;
+    margin-bottom: 1.5rem;
+}
+
+.patchcard-section {
+    margin-bottom: 1.5rem;
+}
+
+.patchcard-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.15);
+}
+
+.patchcard-section ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+    color: #e2e8f0;
+}
+
+.patchcard-section li {
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+}
+
+/* Section colors */
+.patchcard-bugfixes h3 {
+    color: #22c55e;
+}
+
+.patchcard-features h3 {
+    color: #38bdf8;
+}
+
+.patchcard-knownissues h3 {
+    color: #fb7185;
+}
+
+/* Download button */
+.download-button {
+    background: linear-gradient(135deg, #00ffe0, #7f5af0);
+    color: black;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 16px rgba(0, 255, 255, 0.25);
+    font-family: 'JetBrains Mono', monospace;
+    transition: all 0.25s ease;
+}
+
+.download-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 24px rgba(127, 90, 240, 0.45);
+    background: linear-gradient(135deg, #7f5af0, #00ffe0);
+}
+
+/* Optional footer note */
+.patchcard-footnote {
+    font-size: 0.85rem;
+    opacity: 0.5;
+    margin-top: -1rem;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.patchcard-signature {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #00ffc3;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 255, 0.08);
+    font-family: 'JetBrains Mono', monospace;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
+}

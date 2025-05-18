@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://settingsme.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://settingsme.com/update</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://settingsme.com/feedback</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://settingsme.com/perks</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://settingsme.com/changelog</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://settingsme.com/dashboard</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://settingsme.com/audit-report</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://settingsme.com/logout</loc>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

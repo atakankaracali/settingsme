@@ -1,0 +1,50 @@
+.cosmic-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    background: radial-gradient(circle at center, rgba(0, 255, 255, 0.02), transparent);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    margin-top: 4rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: #9ae6f3;
+    box-shadow: 0 -8px 40px rgba(0, 255, 255, 0.02);
+  }
+  
+  .footer-text {
+    font-size: 0.9rem;
+    color: #00ffe0;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  }
+
+  .footer-sub {
+    margin-top: 0.5rem;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    opacity: 0.8;
+  }
+  
+  /* ✨ Glitch flicker effect */
+  .glitch-flicker {
+    animation: flicker 2s infinite ease-in-out;
+    color: #ffffff;
+  }
+  
+  @keyframes flicker {
+    0%, 100% { opacity: 1; text-shadow: 0 0 4px #00ffff; }
+    30% { opacity: 0.4; text-shadow: none; }
+    60% { opacity: 0.9; text-shadow: 0 0 6px #00ffff88; }
+  }
+  
+  /* 🛸 animated beacon */
+  .footer-beacon {
+    animation: pulse 2s infinite ease-in-out;
+    margin-right: 4px;
+    display: inline-block;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.2); opacity: 1; }
+  }
+  

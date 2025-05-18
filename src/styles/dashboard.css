@@ -1,0 +1,116 @@
+.dashboard-container {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.02), transparent 70%), url('/stars.png');
+    background-color: #000;
+    background-size: cover;
+    background-blend-mode: lighten, overlay;
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    animation: fadeIn 1s ease;
+  }
+  
+  .dashboard-inner {
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .dashboard-title {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #00ffe0;
+    text-shadow: 0 0 12px #00ffe0, 0 0 24px rgba(0, 255, 255, 0.15);
+  }
+  
+  .dashboard-card {
+    width: 100%;
+    background: rgba(10, 15, 25, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 24px rgba(0, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+  }
+  
+  .dashboard-card:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.06);
+    border-color: rgba(0, 255, 255, 0.15);
+  }
+  
+  .dashboard-card h2 {
+    font-size: 1.1rem;
+    color: #7dd3fc;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
+  }
+  
+  .dashboard-card p,
+  .dashboard-card li,
+  .dashboard-card code {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    line-height: 1.6;
+  }
+  
+  .dashboard-card ul {
+    list-style-type: "🌐 ";
+    padding-left: 1.2rem;
+  }
+  
+  .source-code {
+    display: block;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin-top: 0.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+  }
+  
+  .patch-log {
+    display: block;
+    color: #f87171;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Mobile Optimization */
+  @media (max-width: 640px) {
+    .dashboard-card {
+      padding: 1.25rem;
+    }
+  
+    .dashboard-title {
+      font-size: 1.5rem;
+    }
+  
+    .dashboard-card h2 {
+      font-size: 1rem;
+    }
+  }
+  
+  .dashboard-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  

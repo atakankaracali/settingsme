@@ -1,0 +1,86 @@
+.loader-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #000011, #000000);
+    font-family: 'Fira Code', monospace;
+    color: #00ff88;
+    overflow: hidden;
+    padding: 2rem;
+  }
+  
+  /* Holographic Glow Orb */
+  .glow-orb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0,255,200,0.4), transparent 70%);
+    border-radius: 50%;
+    filter: blur(100px);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.15;
+    animation: orbFade 6s ease-in-out infinite;
+  }
+  
+  @keyframes orbFade {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.2; }
+  }
+  
+  /* Light Sweep Effect */
+  .loader-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0,255,204,0.08), transparent);
+    animation: sweep 5s linear infinite;
+    z-index: 1;
+  }
+  
+  @keyframes sweep {
+    0% { left: -75%; }
+    100% { left: 125%; }
+  }
+  
+  .loader-terminal {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #00ffcc44;
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  .loader-line {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #00ff88;
+    text-shadow: 0 0 6px rgba(0, 255, 204, 0.15);
+  }
+  
+  .cursor {
+    animation: blink 1.2s step-end infinite;
+    color: #00ff88;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-left: 4px;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  

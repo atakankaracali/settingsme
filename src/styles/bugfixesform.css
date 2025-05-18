@@ -1,0 +1,92 @@
+.bugfixes-form {
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(8, 8, 18, 0.7);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.05);
+    backdrop-filter: blur(18px);
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    position: relative;
+    z-index: 2;
+    color: white;
+    animation: fadeIn 1s ease;
+  }
+  
+  .bugfixes-form h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 6px #00ffe1, 0 0 14px rgba(0, 255, 255, 0.3);
+  }
+  
+  /* Bug list */
+  .bugfixes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .bugfixes-list label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: rgba(15, 23, 42, 0.4);
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: 'JetBrains Mono', monospace;
+    user-select: none;
+  }
+  
+  .bugfixes-list input[type="checkbox"] {
+    accent-color: #7f5af0;
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .bugfixes-list label:hover {
+    background-color: rgba(127, 90, 240, 0.08);
+    border-color: #7f5af033;
+  }
+  
+  .bugfixes-list label.selected {
+    border-color: #7f5af0;
+    background-color: rgba(127, 90, 240, 0.15);
+    box-shadow: 0 0 12px rgba(127, 90, 240, 0.2);
+  }
+  
+  /* Button with gradient */
+  .cosmic-button {
+    width: 100%;
+    background: linear-gradient(135deg, #7f5af0, #00ffe0);
+    color: black;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 16px rgba(127, 90, 240, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .cosmic-button:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 24px #7f5af0;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

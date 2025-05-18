@@ -1,0 +1,71 @@
+.knownissues-form {
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(8, 8, 18, 0.7);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 40px rgba(255, 0, 128, 0.05);
+    backdrop-filter: blur(18px);
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    position: relative;
+    z-index: 2;
+    color: white;
+    animation: fadeIn 1s ease;
+  }
+  
+  .knownissues-form h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ff99cc;
+    text-shadow: 0 0 6px #ff5ecb, 0 0 14px rgba(255, 0, 128, 0.3);
+  }
+  
+  .knownissues-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .knownissues-list label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: rgba(40, 10, 30, 0.5);
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: 'JetBrains Mono', monospace;
+    user-select: none;
+  }
+  
+  .knownissues-list input[type="checkbox"] {
+    accent-color: #ff2da0;
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .knownissues-list label:hover {
+    background-color: rgba(255, 45, 160, 0.08);
+    border-color: #ff2da033;
+  }
+  
+  .knownissues-list label.selected {
+    border-color: #ff2da0;
+    background-color: rgba(255, 45, 160, 0.15);
+    box-shadow: 0 0 12px rgba(255, 45, 160, 0.2);
+  }
+  
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

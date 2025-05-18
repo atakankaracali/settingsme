@@ -1,0 +1,38 @@
+.lag-widget {
+    position: fixed;
+    bottom: 4rem;
+    right: 1rem;
+    background-color: rgba(12, 12, 20, 0.8);
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    color: #00ffe0;
+    font-family: 'JetBrains Mono', monospace;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+.lag-widget.warning {
+    color: #ffc107;
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.3);
+}
+
+.lag-widget.lost {
+    color: #ff4d4f;
+    animation: blink 1.2s infinite;
+    box-shadow: 0 0 12px rgba(255, 77, 79, 0.4);
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}

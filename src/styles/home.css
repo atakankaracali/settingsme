@@ -1,0 +1,196 @@
+.home-container {
+    position: relative;
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #000;
+    font-family: 'JetBrains Mono', monospace;
+    overflow: hidden;
+    color: #d1d5db;
+}
+
+.home-container::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: url("/stars.png");
+    background-repeat: repeat;
+    background-size: contain;
+    opacity: 0.035;
+    animation: drift 60s linear infinite;
+    z-index: 0;
+}
+
+@keyframes drift {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(10%, 5%);
+    }
+}
+
+.sim-container-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sim-id-box {
+    position: absolute;
+    top: -3rem;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 0.6rem 1.2rem;
+    border: 1px solid rgba(0, 255, 255, 0.08);
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.06);
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    text-align: center;
+    color: #00ffe0;
+    backdrop-filter: blur(10px);
+    transform: translateY(-20px);
+}
+
+.sim-id-box p {
+    margin: 0.1rem 0;
+    letter-spacing: 0.4px;
+}
+
+.glitch-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #00ff88;
+    text-shadow:
+        0 0 4px #00ffe1,
+        0 0 10px rgba(0, 255, 225, 0.25),
+        0 0 16px rgba(0, 255, 225, 0.15);
+    animation: glitch-pulse 4s infinite ease-in-out;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.75rem;
+}
+
+@keyframes glitch-pulse {
+
+    0%,
+    100% {
+        text-shadow: 0 0 6px #00ffe1;
+    }
+
+    50% {
+        text-shadow: 0 0 12px #00ffc3, 0 0 24px #00ffdd66;
+    }
+}
+
+.home-subtitle {
+    position: relative;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    max-width: 480px;
+    margin: 0 auto 1rem;
+    line-height: 1.6;
+    text-wrap: balance;
+}
+
+.home-subtitle::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #00ffc3aa, transparent);
+    transform: translateX(-50%);
+    opacity: 0.3;
+}
+
+.home-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    z-index: 2;
+}
+
+@media (min-width: 640px) {
+    .home-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.cyber-button {
+    position: relative;
+    padding: 0.85rem 1.75rem;
+    background: rgba(0, 0, 0, 0.4);
+    color: #00ffc3;
+    border: 1px solid #00ffc3;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 0;
+    text-decoration: none;
+    transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.1);
+}
+
+.cyber-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.cyber-button:hover::before {
+    left: 0;
+}
+
+.cyber-button:hover {
+    color: #ffffff;
+    border-color: #00e6ff;
+    box-shadow: 0 0 6px #00ffc3, 0 0 16px rgba(0, 255, 255, 0.2);
+    transform: scale(1.03);
+}
+
+.slide-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.slide-text-container {
+    width: 100%;
+    max-width: 640px;
+    padding: 0.75rem 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    background: rgba(0, 0, 0, 0.6);
+    color: #00ffe0;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: center;
+    animation: fadeSlide 6s infinite alternate ease-in-out;
+}
