@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    box-sizing: border-box;
     background-color: #000;
     font-family: 'JetBrains Mono', monospace;
     overflow: hidden;
@@ -40,8 +41,12 @@
 .sim-container-wrapper {
     position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 450px;
+    padding: 1rem;
+    margin: 0 auto;
+    z-index: 2;
 }
 
 .sim-id-box {
@@ -125,6 +130,10 @@
     .home-buttons {
         flex-direction: row;
         justify-content: center;
+    }
+
+    .home-container {
+        padding: 1.4rem;
     }
 }
 
